@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="webmeredian" sortOrder="777" translate="label">
+			<label>Webmeredian</label>
+		</tab>
+		<section id="topmenu" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>Top menu</label>
+			<tab>webmeredian</tab>
+			<resource>Webmeredian_Topmenuurl::config_webmeredian_topmenuurl</resource>
+			<group id="topmenuurl" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Top menu url</label>
+				<field id="urls" translate="label comment tooltip" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="0">
+					<label>Customer Fields Mapping</label>
+					<frontend_model>Webmeredian\Topmenuurl\Block\Adminhtml\System\Config\Form\Field\Customermap</frontend_model>
+					<backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+					<comment><![CDATA[Urls intop menu!]]></comment>
+					<tooltip></tooltip>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
